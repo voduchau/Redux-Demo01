@@ -1,6 +1,8 @@
 /**
  * @format
  */
+
+ // index -> App -> Cpn01 -> Cpn02
 import React from 'react';
 import {AppRegistry} from 'react-native';
 import App from './App';
@@ -18,6 +20,7 @@ const reducer =(state=initialState,action)=>{
       return  {...state,count:state.count-1};
     default:
       return state;
+      //**chú ý phải set default thì bên components con mới gọi tới state được
   }
 }
 const store=createStore(reducer);
